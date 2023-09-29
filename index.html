@@ -38,17 +38,22 @@
         v-if="isError" 
         class="error">
         il nuovo caractere deve al meno avere 5 caratteri</p>
+       
+
     </div>
 
     <div class="task-container">
       <ul v-if="tasks.length > 0">
           <li v-for="(task, index) in tasks">
               <span @click="underline(task)" :class="{'underlined': task.done}">{{ task.text }}</span>
-              <i @click="removeTasks(index)" class="fa-solid fa-trash"></i>
+              <i @click="removeTask(task, index)" class="fa-solid fa-trash"></i>
           </li>
          
       </ul>
       <h3 v-else>Non ci sono task</h3>
+      <p 
+      v-if="selectFirst" class="text-center text-danger  " >
+     Prima devi selezionare come fatta la cosa da fare</p>
 
   </div>
 

@@ -47,10 +47,12 @@ img{
 }
 
 .task-container li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 30px;
   border-bottom: 1px solid lightgray;
   margin-bottom: 15px;
-
 
 }
 
@@ -59,17 +61,12 @@ img{
 }
 
 .task-container li i{
-  float: right;
   margin-top: 15px;
-  margin-bottom: 5px;
+  height: 100%;
+  align-items: center;
   cursor: pointer;
 }
-.task-container li i{
-  float: right;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  cursor: pointer;
-}
+
 .task-container li i:hover{
    color: red;
 }

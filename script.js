@@ -6,7 +6,7 @@ createApp ({
           tasks: [
           {
             text: "fare la spesa",
-            done:true
+            done:false
           },
           {
             text: "fare la pasta",
@@ -21,6 +21,7 @@ createApp ({
 
           newTask:'',
           isError: false,
+          selectFirst: false,
           
       } 
 
@@ -43,8 +44,19 @@ createApp ({
       
 
     },
-    removeTask(index){
+    removeTask(task, index){
+
+      if (task.done==true) {
         this.tasks.splice(index,1)
+      }else{
+        this.selectFirst = true 
+        setTimeout(() =>{
+          this.selectFirst=false
+        },3000)
+        
+        
+      }
+        
     },
 
     underline(task) {
