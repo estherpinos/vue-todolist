@@ -4,13 +4,24 @@ createApp ({
   data(){
       return{
           tasks: [
-              'fare la spesa',
-              'studiare Vue',
-              'comprare la papa'
-          ],
+          {
+            text: "fare la spesa",
+            done:true
+          },
+          {
+            text: "fare la pasta",
+            done:false
+          },
+          {
+            text: "fare la carne",
+            done:false
+          }
+        ],
+          
 
           newTask:'',
-          isError: false
+          isError: false,
+          isUnderlined: false
       } 
 
   },
@@ -20,7 +31,12 @@ createApp ({
         if (this.newTask.length < 5) {
             this.isError = true   
         } else{
-            this.tasks.unshift(this.newTask);
+
+          var object = {
+            text: this.newTask,
+            done: false
+          }
+            this.tasks.push(object);
             this.newTask=''
             this.isError = false
         }
@@ -33,5 +49,8 @@ createApp ({
     },
       mounted(){
       console.log("montato");
-  }
+    },
+    underline() {
+      this.isUnderlined = !this.isUnderlined;
+    }
 }).mount('#app');

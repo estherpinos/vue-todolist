@@ -4,14 +4,19 @@
   box-sizing: border-box;
 }
 
+
+/* LOGO */
 img{
   max-width: 100%;
+  padding: 20px 0;
 }
 
 .logo{
   margin: 0 auto;
   width: 300px;
+  
 }
+
 
 .new-task{
   text-align: center;
@@ -44,8 +49,9 @@ img{
 .task-container li{
   height: 30px;
   border-bottom: 1px solid lightgray;
-  margin-bottom: 10px;
-  padding: 0 15px;
+  margin-bottom: 15px;
+
+
 }
 
 .task-container li:hover{
@@ -66,4 +72,9 @@ img{
 }
 .task-container li i:hover{
    color: red;
+}
+
+/* UNDERLINE */
+.underlined{
+  text-decoration: underline;
 }

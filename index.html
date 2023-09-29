@@ -23,7 +23,7 @@
 
   <div id="app" class="container">
     <div class="logo">
-        <img src="img/logo.png" alt="">
+        <img src="img/Immagine WhatsApp 2023-09-29 ore 14.18.57_cdbcaac4.jpg" alt="">
     </div>
 
     <div class="new-task">
@@ -43,7 +43,7 @@
     <div class="task-container">
       <ul v-if="tasks.length > 0">
           <li v-for="(task, index) in tasks">
-              <span>{{ task }}</span>
+              <span @click="underline" :class="{'underlined': isUnderlined}">{{ task.text }}</span>
               <i @click="removeTasks(index)" class="fa-solid fa-trash"></i>
           </li>
          
@@ -55,7 +55,6 @@
 </div>
 
 
-<script src="script.js"></script>
 
   
 
