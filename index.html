@@ -43,7 +43,7 @@
     <div class="task-container">
       <ul v-if="tasks.length > 0">
           <li v-for="(task, index) in tasks">
-              <span @click="underline" :class="{'underlined': isUnderlined}">{{ task.text }}</span>
+              <span @click="underline(task)" :class="{'underlined': task.done}">{{ task.text }}</span>
               <i @click="removeTasks(index)" class="fa-solid fa-trash"></i>
           </li>
          

@@ -76,5 +76,5 @@ img{
 
 /* UNDERLINE */
 .underlined{
-  text-decoration: underline;
+  text-decoration: line-through;
 }

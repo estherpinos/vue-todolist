@@ -21,7 +21,7 @@ createApp ({
 
           newTask:'',
           isError: false,
-          isUnderlined: false
+          
       } 
 
   },
@@ -45,12 +45,15 @@ createApp ({
     },
     removeTask(index){
         this.tasks.splice(index,1)
+    },
+
+    underline(task) {
+      task.done = !task.done
     }
+
     },
       mounted(){
       console.log("montato");
     },
-    underline() {
-      this.isUnderlined = !this.isUnderlined;
-    }
+   
 }).mount('#app');
